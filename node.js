@@ -32,4 +32,24 @@ app.use(express.static(__dirname + "/resources"));
 var port = process.env.PORT || 2020; //process.env.port will only be used if running on heroku
 app.listen(port, function() {
     console.log("You may access the server locally via: http://localhost:" + port);
-  });
+});
+
+
+app.get('/', (req, res) => {
+    res.sendFile(path.resolve("html/index.html"));
+});
+
+
+app.get('/resources', (req, res) => {
+    res.sendFile(path.resolve("html/resources.html"));
+});
+
+
+app.get('/aboutUs', (req, res) => {
+    res.sendFile(path.resolve("html/aboutUs.html"));
+});
+
+
+app.get('/inTheNews', (req, res) => {
+    res.sendFile(path.resolve("html/inTheNews.html"));
+});
