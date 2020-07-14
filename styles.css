@@ -1,0 +1,519 @@
+
+/*Hamburger Icon styling*/
+
+.hamburgerIconNavOptions{
+    color: white;
+    padding-top: 20px;
+}
+
+/*Styling for the hamburger icon (which is really a list)*/
+.hamIconNavOptionsList{
+    margin: 0;
+    padding: 0;
+    list-style: none; /*removing the bullet point*/
+}
+
+/*styling the nested list in the hamburger icon*/
+#hamburgerIconNavOptionsNestedList{
+    margin: 0;
+    padding: 0;
+    list-style: none; /*Removiing the bullet points*/
+    background-color: #13204f;
+    opacity: .5; /*Making this bad boy transparent. (0 is completely transperent, 9 is solid black)*/
+}
+
+/*Removing the default underlining provided by the anchor tag's default styling*/
+.navOptionAnchorItem{
+    text-decoration: none; /*Removing the default styling from the anchor element*/
+    color: white;
+}
+
+/*Removing the underlining of links provided by the anchor tag's default styling*/
+.navOptionAnchorItem:link {
+    text-decoration: none;
+}
+
+/*Removing the underlining that occurs by default on anchor tags when hovering over them.*/
+.navOptionAnchorItem:hover {
+    text-decoration: none;
+}
+
+/*Styling each list item within the hamburger icon's nested list*/
+.hamburgerIconNavOptions{
+    float: left;
+    width: 200px;
+    height: 40px;
+}
+
+@media(max-width: 1200px) {
+    /*This logic will execute when the screen's width becomes too small to display everything*/
+    .socialMediaIconList{
+        display: none; /*Will hide the list items when the screen's width is too small to display them*/
+    }
+
+    .socialMediaIconList.toggleCls{
+        display: none; /*will remove the social media icon list if the screen isn't wide enough to display it*/
+    }
+
+    .hamburgerIconSocialMedia {
+        display: none; /*TODO: Don't really need a hamburger bar to begin with. Need to come back and remove this.*/
+    }
+
+    /*Same stuff as above, except for the navBar options list*/
+    .navbarOptionsList{
+        display: none;
+    }
+
+    #hamburgerIconNavOptionsNestedList.toggleCls{
+        display: block;
+    }
+
+    /*The screen is too small. But hide the nested list that belons to the hamburger icon. Will be displayed when the hamburger icon is clicked.*/
+    #hamburgerIconNavOptionsNestedList{
+        display: none;
+    }
+}
+
+/*Make the hamburger icon disappear when the screen is large enough to display all list view items*/
+@media(min-width: 1199px) {
+    .hamIconNavOptions{
+        display: none; /*Hides the hamburger icon when the screen is large enough to display everything*/
+    }
+
+    .socialMediaIconList{
+        display: initial; /*Shows the social media links*/
+    }
+
+    .navbarOptionsList{
+        display: initial;
+    }
+}
+
+.navBar {
+    display: flex;
+    flex-direction: row; /*Aligns items horizontally*/
+    flex-wrap: nowrap; /*Prevents overflow wrapping. We'd rather everything get packed on a single row.*/
+    padding: 10px;
+    background-color: #13204f;
+    height: 125px;
+    position: fixed;
+    width: 100%;
+}
+
+.socialMediaNavBarArea {
+    position: relative;
+    width: 25%;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.logoArea {
+    position: relative;
+    width: 50%;
+    text-align: center;
+}
+
+.navBarOptionsAreaFullScreen {
+    position: relative;
+    width: 30%;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 15px;
+    padding-right: 30px;
+}
+
+/*Social Media area*/
+ .socialMediaIcon {
+    list-style: none;
+    margin: auto;
+    display: inline-block;
+    font-size: 10px;
+    padding: 10px 10px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.socialMediaIconList {
+    padding-left: 0px;
+    padding-right: 90px;
+}
+
+.socialMediaNavBarIcons {
+    top: 40%;
+    left: 50%;
+    transform: translate(-53%, -50%);
+    position: absolute;
+}
+
+.socialMediaIcon:hover {
+    color: #565759;
+    border: 1px solid #565759;
+    transition: .75s;
+}
+
+/*Navigation Bar logo area*/
+#navBarLogocaster {
+    max-width: 100%;
+    max-height: 75%;
+
+    /*Aligns the image center horizontal and vertical*/
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/*Navigation Bar options area*/
+.navItem {
+    display: inline;
+}
+
+.placeholder {
+    height: 125px;
+}
+
+.navLink {
+    padding: 5px;
+    color: white;
+}
+
+.navLink:hover {
+    text-decoration: none;
+    color: #565759;
+    transition: .75s;
+}
+
+/*---------------------- scholarship.html -----------------*/
+
+#scholarshipInstructionsSection {
+    display: flex;
+    justify-content: center; /*center horizontally*/
+    padding-top: 50px; /*Adding some space between navbar and instructions section*/
+    padding-bottom: 50px; /*Adding some padding between the instructions section and application form*/
+}
+
+#scholarshipInstructionsParagraph{
+    width: 80%;
+}
+
+#scholarshipFormSection {
+    display: flex;
+    align-items: center; /*Center vertically*/
+    justify-content: center; /*Center horizontally*/
+    width: 100%; /*Make the section take up the whole width of the screen*/
+}
+
+#scholarshipForm {
+    display: flex; /*so that every item in the form shows up on a separate line.*/
+    flex-direction: column; /*orient all items in the form vertically.*/
+    width: 80%; /*Take up 50% of the screen real-estate's width.*/
+}
+
+.scholarshipFormElement {
+    padding: 3px;
+    margin: 3px; /*So that the horizontal boxes aren't too crammed together.*/
+}
+
+#genderDropDown{
+    color:#7f8082; /*Font color to match the color of all other form fields*/
+}
+
+.unofficialTranscriptFormPortion {
+    display: flex;
+    width: 45%;
+}
+
+#unofficialTranscriptLabel {
+    flex: 1;
+}
+
+#unofficialTranscriptFile {
+    flex: 1;
+}
+
+.resumeFormPortion {
+    display: flex;
+    width: 45%;
+}
+
+#resumeLabel {
+    flex: 1;
+}
+
+#resumeFile {
+    flex: 1;
+}
+
+#footerSection{
+    padding-bottom: 50px; /*Adding some space between the submit button and the bottom of the page*/
+}
+
+/*--------------- applicationSentSuccessfully.html -----------------*/
+
+.submissionAcknowledgementSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*center all contents vertically*/
+    justify-content: center; /*center horizontally*/
+    width: 100%; /*make the section take up the whole width of the screen*/
+    padding-top: 100px; /*TODO: Figure out how to center the whole section vertically*/
+}
+
+#applicationReceivedSuccessfullyMessageParagraph{
+    display:flex;
+    width: 50%;
+    font-size: 30px;
+    justify-content: center; /*center the text horizontally*/
+}
+
+#scholarshipSubmissionAcknowledgementParagraph{
+    padding-top: 50px; /*adding padding for spacing out sections of text*/
+    width: 50%; /*only allow the element to take up 50% of the screen width*/
+    font-size: 20px;
+}
+
+.scholarshipSubmissionConfirmationPageLogoSection{
+    display: flex;
+    align-items: center; /*center all contents vertically*/
+    justify-content: center; /*center horizontally*/
+    width: 100%; /*make the section take up the whole width of the screen*/
+    flex-direction: column; /*allows the logo to stay centered when displayed on a smaller screen*/
+}
+
+#scholarshipSubmissionConfirmationPageLogoImage{
+    width: 30%; /*Reducing width of the logo to 40% its original width*/
+    justify-content: center; /*center the image horizontally*/
+}
+
+
+/*--------------- curriculumns.html -----------------*/
+
+#descriptionSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*center all contents vertically*/
+    justify-content: center; /*center horizontally*/
+    width: 100%; /*make the section take up the whole width of the screen*/
+    padding-top: 100px; /*TODO: Figure out how to center the whole section vertically*/
+}
+
+#descriptionSectionParagraph{
+    padding-top: 50px; /*adding padding for spacing out sections of text*/
+    width: 75%; /*only allow the element to take up 50% of the screen width*/
+    font-size: 20px;
+}
+
+#courseOfferingsSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*center all contents vertically*/
+    justify-content: center; /*center horizontally*/
+    width: 100%; /*make the section take up the whole width of the screen*/
+    padding-top: 100px; /*TODO: Figure out how to center the whole section vertically*/
+    padding-bottom: 6rem;
+}
+
+#courseOfferingsSection{
+    display:flex;
+    flex-direction: row;
+}
+
+.courseCard {
+    display: grid;
+    grid-template-columns: 37rem; /*width of the card*/
+    grid-template-rows: 25rem 2rem 18rem 7rem;
+    grid-template-areas: "courseCardImage" "courseCardTitle" "courseCardDescription" "courseCardLearnMoreButtonDiv";
+
+    font-family: roboto;
+    border-radius: 18px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    text-align: center;
+
+    margin: 2rem;
+}
+
+.courseCardImage {
+    grid-area: courseCardImage;
+}
+
+.courseCardTitle {
+    grid-area: courseCardTitle;
+    font-size: 2rem;
+}
+
+.courseCardDescription{
+    grid-area: courseCardDescription;
+    display: flex;
+    align-items: center; /*center vertically*/
+    justify-content: center; /*center horizontally*/
+}
+
+.courseCardLearnMoreButtonDiv{
+    grid-area: courseCardLearnMoreButtonDiv;
+    display: flex;
+    align-items: center; /*center vertically*/
+    justify-content: center; /*center horizontally*/
+}
+
+.courseCardLearnMoreButton {
+    background-color: #13204f;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 12px; /*For sexy rounded corners*/
+}
+
+.courseCardImage#scratchCardImage{
+    background: url("resources/scratchProgramming.png"); /*Specify the image*/
+    background-size: cover; /*Resize the image so that it's not too big*/
+}
+
+.courseCardImage#webDevCardImage{
+    background: url("resources/webDevelopment.jpg"); /*Specify the image*/
+    background-size: cover; /*Resize the image so that it's not too big*/
+}
+
+.courseCardImage#pythonCardImage{
+    background: url("resources/python.jpg"); /*Specify the image*/
+    background-size: cover; /*Resize the image so that it's not too big*/
+}
+
+/*------------------ curriculumsWebDev.html ------------------------*/
+
+.curriculumMastheadSection{
+    height: 35rem;
+    padding-top: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(resources/mastheadBackground-webDev.png);
+}
+
+.curriculumMastheadHeading {
+    color: white;
+}
+
+.courseDescriptionSection {
+    padding-top: 3rem;
+    display: flex;
+    width: 100%;
+    align-items: center; /*center vertically*/
+    justify-content: center; /*center horizontally*/
+}
+
+.courseDescriptionParagraph {
+    width: 60%;
+}
+
+.courseOverviewSection{
+    display: flex;
+    flex-direction: column; /*organize items vertically*/
+    align-items: center; /*center vertically*/
+    justify-content: center; /*center horizontally*/
+}
+
+.courseOverviewSectionCard{
+    display: flex;
+    flex-direction: column;
+    height: 25rem;
+    width: 50rem;
+    font-family: roboto;
+    border-radius: 18px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    text-align: center;
+    margin: 2rem;
+}
+
+.courseOverviewSectionCardLessonNumberParagraph {
+    background-color: #13204f;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.courseOverviewSectionCardLessonHeadingParagraph {
+    font-size: 2rem;
+    color: #13204f;
+}
+
+.courseOverviewSectionCardLessonDetailsParagraph{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.codigoInitiativeLogoContainerDiv{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center; /*center horizontally*/
+    align-items: center; /*center vertically*/
+}
+
+
+.codigoInitiativeLogoDisplayDiv{
+    height: 95%; /*take up only 30% of the parent element's height*/
+    width: 10%; /*take up only 30% of the parent element's width*/
+    background-image: url(resources/codigoinitiative_logo_only.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 1.5rem;
+}
+
+
+.scheduleInformationalSessionSection{
+    display: flex;
+    width: 100%;
+    justify-content: center; /*center horizontally*/
+    align-items: center; /*center vertically*/
+    flex-direction: column;
+}
+
+
+.scheduleInformationalSessionParagraph{
+    width: 60%;
+}
+
+.scheduleInformationalSessionButton {
+    background-color: #13204f;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 12px; /*For sexy rounded corners*/
+    margin-bottom:  2rem;
+}
+
+
+/*---------------------- ScheduleInformationalSession.html -------------------------*/
+
+#scheduleInformationalSessionInstructionsSection {
+    display: flex;
+    justify-content: center; /*center horizontally*/
+    padding-top: 50px; /*Adding some space between navbar and instructions section*/
+    padding-bottom: 50px; /*Adding some padding between the instructions section and application form*/
+}
+
+#scheduleInformationalSessionInstructionsParagraph{
+    width: 80%;
+}
+
+#scheduleInformationalSessionFormSection {
+    display: flex;
+    align-items: center; /*Center vertically*/
+    justify-content: center; /*Center horizontally*/
+    width: 100%; /*Make the section take up the whole width of the screen*/
+}
+
+#informationalSessionRequestForm {
+    display: flex; /*so that every item in the form shows up on a separate line.*/
+    flex-direction: column; /*orient all items in the form vertically.*/
+    width: 80%; /*Take up 50% of the screen real-estate's width.*/
+}
+
+.scheduleInformationalSessionFormElement {
+    padding: 3px;
+    margin: 3px; /*So that the horizontal boxes aren't too crammed together.*/
+}
