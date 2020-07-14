@@ -517,3 +517,8 @@
     padding: 3px;
     margin: 3px; /*So that the horizontal boxes aren't too crammed together.*/
 }
+
+
+#summerInternPodcastTitle{
+  color: black;
+}
