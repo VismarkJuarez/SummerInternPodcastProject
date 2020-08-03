@@ -2,7 +2,7 @@
 /*Hamburger Icon styling*/
 
 .hamburgerIconNavOptions{
-    color: white;
+    color: black;
     padding-top: 20px;
 }
 
@@ -25,7 +25,7 @@
 /*Removing the default underlining provided by the anchor tag's default styling*/
 .navOptionAnchorItem{
     text-decoration: none; /*Removing the default styling from the anchor element*/
-    color: white;
+    color: black;
 }
 
 /*Removing the underlining of links provided by the anchor tag's default styling*/
@@ -94,7 +94,7 @@
     flex-direction: row; /*Aligns items horizontally*/
     flex-wrap: nowrap; /*Prevents overflow wrapping. We'd rather everything get packed on a single row.*/
     padding: 10px;
-    background-color: #13204f;
+    background-color: FFFFFF;
     height: 125px;
     position: fixed;
     width: 100%;
@@ -129,8 +129,8 @@
     display: inline-block;
     font-size: 10px;
     padding: 10px 10px;
-    color: white;
-    border: 1px solid white;
+    color: black;
+    border: 1px solid black;
     border-radius: 50%;
 }
 
@@ -177,7 +177,7 @@
 
 .navLink {
     padding: 5px;
-    color: white;
+    color: black;
 }
 
 .navLink:hover {

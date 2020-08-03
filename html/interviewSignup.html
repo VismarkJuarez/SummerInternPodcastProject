@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS, and stupid fontawesome shyt -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+        <!-- Required CDNs: jQuery, Popper.js, Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <!--Favicon-->
+        <link rel="shortcut icon" type="image/x-icon" href="../resources/codigoinitiativefavi.ico"/>
+
+        <!--Custom CSS Stylesheet-->
+        <link rel="stylesheet" href="../styles.css"/>
+        <title>Summer Intern Project | Info Bank Podcast</title>
+    </head>
+
+    <body>
+        <section class="navigationSection">
+            <nav class="navBar">
+                <div class="socialMediaNavBarArea">
+                    <ul class="socialMediaIconList">
+                        <li class="socialMediaIcon"><i class="fab fa-facebook-f"></i></li>
+                        <li class="socialMediaIcon"><i class="fab fa-twitter"></i></li>
+                        <li class="socialMediaIcon"><i class="fab fa-youtube"></i></li>
+                        <li class="socialMediaIcon"><i class="fab fa-github"></i></li>
+                        <li class="socialMediaIcon"><i class="fab fa-linkedin-in"></i></li>
+                    </ul>
+                </div>
+
+                <div class="logoArea">
+                    <img id="navBarLogocaster" src="../resources/federalreservebankofchicago.png" alt="Codigo Initiative">
+                </div>
+
+                <!--TODO: Nav bar options list font style should match the Codigo Initiative logo font style-->
+                <div class="navBarOptionsAreaFullScreen">
+                  <ul class="navbarOptionsList">
+                      <li class="navItem">
+                          <a class="navLink" href="index.html">Home</a>
+                      </li>
+                      <li class="navItem">
+                          <a class="navLink" href="resources.html">Resources</a>
+                      </li>
+                      <li class="navItem">
+                          <a class="navLink" href="aboutUs.html">About Us</a>
+                      </li>
+                      <li class="navItem">
+                        <a class="navLink" href="inTheNews.html">In the News</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="hamIconNavOptions">
+                    <ul class="hamIconNavOptionsList">
+                        <li class="hamburgerIconNavOptions"><a href="#" onClick="toggleHamburgerNavOptionsList()">&#9776;</a>
+                            <ul id="hamburgerIconNavOptionsNestedList">
+                                <li class="hamburgerIconNavOptionsNestedListItem"><a class="navOptionAnchorItem" href="index.html">Home</a></li>
+                                <li class="hamburgerIconNavOptionsNestedListItem"><a class="navOptionAnchorItem" href="resources.html">Resources</a></li>
+                                <li class="hamburgerIconNavOptionsNestedListItem"><a class="navOptionAnchorItem" href="curriculums.html">About Us</a></li>
+                                <li class="hamburgerIconNavOptionsNestedListItem"><a class="navOptionAnchorItem" href="scholarship.html">In the News</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+
+        <div class="placeholder"></div>
+
+        <!-- <section class="curriculumMastheadSection" id="curriculumsWebDevMastheadSection">
+            <div class="curriculumMastheadDiv" id="curriculumWebDevDiv">
+                <h1 class="curriculumMastheadHeading" id="curriculumMastheadHeadingWebDev">Python Programming & Computer Science</h1>
+            </div>
+        </section> -->
+
+        <section id="scholarshipInstructionsSection">
+            <p id="scholarshipInstructionsParagraph">
+                    The Codigo Initiative was formed in 2020 with the aim of closing the socio-economic opportunity divide in STEM.  To this end, the Codigo Initiative Scholarship Fund was established to support current undergraduate university/college students from underrepresented groups pursuing majors in STEM-related fields.  The scholarships (worth $500 USD each) will be awarded to students who possess a history of overcoming adversity, and a commitment to helping improve the lives of others through self-less service to his/her community.
+                <br>
+                <br>
+                    To be considered for the Codigo Initiative Scholarship, you must be currently enrolled in an accredited college or university within the United States--including Alaska or U.S Territory--and must submit a copy of your unofficial college/university transcripts, along with a brief 500 word essay.  The essay prompt and application are located in the section below:
+            </p>
+        </section>
+    
+        <section id="scholarshipFormSection">
+            <form action="/application_received_successfully" method="POST" id="scholarshipForm" enctype="multipart/form-data">
+                <input class="scholarshipFormElement" required name="firstName" placeholder="First Name" />
+                <input class="scholarshipFormElement" required name="lastName" placeholder="Last Name" />
+                <select class="scholarshipFormElement" required name="gender" id="genderDropDown">
+                    <option value="" disabled selected>Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Male">Female</option>
+                    <option value="Female">Non-Binary</option>
+                </select>
+                <input class="scholarshipFormElement" required name="hometownCity" placeholder="Hometown City"/>
+                <input class="scholarshipFormElement" required name="hometownState" placeholder="Hometown State"/>
+                <input class="scholarshipFormElement" required name="schoolCity" placeholder="College/University City"/>
+                <input class="scholarshipFormElement" required name="schoolState" placeholder="College/University State"/>
+                <input class="scholarshipFormElement" required name="email" placeholder="E-mail Address"/>
+                <input class="scholarshipFormElement" required name="phoneNumber" placeholder="Phone Number" minlength="10" maxlength="10"/>
+                <input class="scholarshipFormElement" required name="schoolName" placeholder="College/University Name">
+                <input class="scholarshipFormElement" required name="major" placeholder="College Major">
+                <p class="scholarshipFormElement">
+                    <strong>
+                        Please write a 500 word essay response to the prompt below.  You may write the
+                        essay directly in the text area below, or copy and paste it in from your favorite text editor.
+                    </strong>
+                    <br>
+                    <br>
+                    The National Association of Manufacturing reports that, by the year 2025,
+                    more than 2 million American STEM jobs are likely to go unfilled due to a lack of
+                    skilled STEM workers.  This issue is further compounded by the low
+                    participation of women, people of color, and economically disadvantaged
+                    individuals in STEM-related fields. <em>Write about what you have done in
+                    service to your community, and what you hope to do in the future to help
+                    close the opportunity gap in STEM fields for underrepresented groups.</em>
+                    <br>
+                    <br>
+                </p>
+                <textarea class="scholarshipFormElement" required name="scholarshipEssay" placeholder="Type or copy/paste your essay here" rows="5" cols="100"></textarea>
+                <div class="scholarshipFormElement unofficialTranscriptFormPortion">
+                    <label for="unofficialTranscript" id="unofficialTranscriptLabel">Select unofficial transcripts (required):</label>
+                    <input type="file" id="unofficialTranscriptFile" required name="unofficialTranscript" accept=".doc, .docx, .pdf, .txt, .jpg, .jpeg, .png">
+                </div>
+                <div class="scholarshipFormElement resumeFormPortion">
+                    <label for="resume" id="resumeLabel">Select resumé (optional):</label>
+                    <input type="file" id="resumeFile" name="resume" accept=".doc, .docx, .pdf, .txt, .jpg, .jpeg, .png">
+                </div>
+                
+                <button id="scholarshipFormSubmitButton">Submit</button>
+            </form>
+        </section>
+
+    <footer>
+        <script src="../index.js"></script>
+    </footer>
+</html>

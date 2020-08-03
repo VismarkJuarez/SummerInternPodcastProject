@@ -23,14 +23,53 @@ function configureNavBar() {
         document.querySelector(".navBar").style.height = "90px";
         hideSocialMediaIcons();
         hideNavBarOptions();
+        hideLogo();
   } else {
         //The user has scrolled back up to the top. Display all corollary navbar
         //options/details.
         document.querySelector(".navBar").style.height = "120px";
         unhideSocialMediaIcons();
         unhideNavBarOptions();
+        unhideLogo();
   }
 }
+
+function hideLogo() {
+    let frbLogo = document.querySelector("#navBarLogocaster");
+
+    //If the logo is currently being displayed, hide it.
+    if(frbLogo.style.visibility != "hidden") {
+        frbLogo.style.visibility = "hidden";
+    } else {
+        //no further action needed, as the social media icons are already
+        //hidden.
+    }
+}
+
+
+function unhideLogo() {
+    let frbLogo = document.querySelector("#navBarLogocaster");
+    let navOptionsHamburgerIcon = document.querySelector(".hamIconNavOptions");
+
+    /**
+     * If the nav options' hamburger icon is not being displayed (display = none),
+     * it is because the screen is large enough to display its contents.
+     * So, the navBarOptions can safely be re-displayed.
+     * */
+    // TODO: why does checking for a blank work? lol
+    if(navOptionsHamburgerIcon.style.visibility != "hidden"){
+        frbLogo.style.visibility = "visible";
+    } else {
+        /**
+         * The nav options' hamburger icon is being displayed, which indicates
+         * that the screen is too small.
+         * So the navBarOptions need NOT be displayed. No further action needed.
+         */
+    }
+}
+
+
+
 
 /**
  * Will hide the social media icons (if it is even being displayed at all)
