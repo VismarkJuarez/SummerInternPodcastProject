@@ -53,3 +53,7 @@ app.get('/aboutUs', (req, res) => {
 app.get('/inTheNews', (req, res) => {
     res.sendFile(path.resolve("html/inTheNews.html"));
 });
+
+app.post('/submission_successful', (req, res) => {
+    res.sendFile(path.resolve("html/submissionSuccessful.html"));
+});
